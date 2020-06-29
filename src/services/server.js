@@ -6,6 +6,9 @@ const productsRouter = require("./services/products")
 
 server.use(express.json())
 server.use(cors())
+server.use("/products", (req,res)=>{
+    res.send("ok")
+})
 
 const port = process.env.PORT || 3000
 server.listen(port, ()=>{
