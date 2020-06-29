@@ -26,7 +26,7 @@ const forbiddenHandler = (err,req,res,next)=>{
 // catch all
 const catchAllHandler = (err,req,res,next)=>{
     if(!res.headersSent){
-        res.status(er.httpStatusCode || 500).send(err.message)
+        res.status(err.httpStatusCode || 500).send(err.message)
     }
 }
 
