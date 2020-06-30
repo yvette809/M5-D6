@@ -9,7 +9,10 @@ const {
 } = require ("./src/errorHandler")
 const path = require("path")
 const cors = require("cors")
-
+server.use(express.json())
+server.use(cors())
+// make the content of the images folder available
+// server.use("/images", express.static(pathh.join(__dirname, "images")))
 server.use("/products", productsRouter)
 
 // Error handlers
